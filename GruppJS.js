@@ -43,7 +43,7 @@ ruta2.addEventListener(
   function() {
     ruta2.style.backgroundColor = "red";
     ruta2.style.color = "white";
-    ruta2.style.textAlign = "center";
+    
     ruta2.innerHTML = "<h1>Mouseover</h1>";
   },
   false
