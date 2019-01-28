@@ -1,9 +1,11 @@
 
-var ruta = document.getElementById("box");
-var ruta2 = document.getElementById("box2");
+
+// Variabler
+//Tre rader som byter färg till gul när man trycker på den raden
 var rad1 = document.getElementById("rad1");
 var rad2 = document.getElementById("rad2");
 var rad3 = document.getElementById("rad3");
+
 
 rad1.addEventListener("click",function(){
 rad1.style.backgroundColor="yellow";
@@ -23,8 +25,8 @@ rad3.addEventListener("click",function(){
     rad3.style.backgroundColor="yellow";
 },false);
 
-
-
+//Rutan där man klickar för att byta bakgrundsfärg i rutan
+var ruta = document.getElementById("box");
 var nr = 0;
 
  ruta.addEventListener("click",function()
@@ -40,6 +42,7 @@ var nr = 0;
 
 },false);  
 
+//funktion för att slumpa färg
 function getRandomColor () {
     for(var i = 0; i<1; i++){
 
@@ -65,22 +68,24 @@ function getRandomColor () {
     ruta.innerHTML+="Du tryckte på"+alfa+"<br>";
 }); */
 
+//Ruta2 vilket är rutan med mouseover och mouseout event
+var ruta2 = document.getElementById("box2");
 
 
 ruta2.addEventListener("mouseover",function(){
     ruta2.style.backgroundColor="red";
     ruta2.style.color="white";
     
-    ruta2.innerHTML="<h1>Mouseover</h1>"
+    ruta2.innerHTML="<h3>Mouseover</h3>"
 },false);
 
 ruta2.addEventListener("mouseout",function(){
     ruta2.style.backgroundColor="green";
     ruta2.style.color="black";
-    ruta2.innerHTML="<h1>Mouseout</h1>"
+    ruta2.innerHTML="<h3>Mouseout</h3>"
 },false);
 
-
+// Rutan där man kan rita vad man vill
 canvas = document.getElementById("canvas");
 c = canvas.getContext("2d");
 
@@ -136,7 +141,7 @@ function mPos(evt) {     //mousePosition
 };
 
 
-
+//Ruta3 som gör att när du trycker ner en valfri tangent så ändras färgen i rutan
 var ruta3 = document.getElementById("box3");
 window.addEventListener("keydown",random_bg_color);
 
@@ -153,3 +158,13 @@ function random_bg_color() {
 
 random_bg_color();
 
+//funktion för att skicka alert när ett värde ändras
+function ourFunction(inmatning){
+    
+    alert("Värdet har ändrats. Nya värdet är " + inmatning);
+}
+
+//funktion för onload event
+function myFunction(){
+    alert("Hej och välkomna till leklandet");
+}

@@ -7,13 +7,17 @@
     <title>LekaMedJavascript</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
 </head>
-<body>
+
+<body onload="myFunction()" class="body">
+    
     <header>
         <h1>Javascript Events</h1>
     </header>
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="index.Html">Startsida</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -47,15 +51,24 @@
           </form>
         </div>
       </nav>
-    
-   <p>Vill du rita kan du göra det här</p> <canvas class="canvas" id="canvas"  width="300" height="200" style="border: solid 1px #000"></canvas>
-    
-    <p id="rad1">Tryck här så blir det gult</p>
-    <p id="rad2">Tryck här så blir det gult men vitt på de andra raderna</p>
-    <p id="rad3">Tryck här så blir det gult men vitt på de andra raderna</p>
-    <div id="box"></div>
-    <div id="box2"><h3 class="h1">Try to hover over this box</h3></div>
-    <div id="box3"><h3 class="h1">Tryck på valfri tangent</h3></div>
+  <br>
+  <div class="meddelande">
+  <p class="text-mitten">Skriv vad du vill i textfältet så kommer du få ett meddelande när du lämnar textfältet!</p>
+         <p class="text-mitten">Skriv vad du vill:</p>  <input class="meddelande" type="text" name="txt" value="Hejsvejs" onchange="ourFunction(this.value)" >
+        </div>
+  <br> 
+
+   <p class="text-mitten">Vill du rita kan du göra det här</p> <canvas class="canvas" id="canvas"  width="300" height="200" style="border: solid 1px #000"></canvas>
+
+    <br>
+
+    <p class="text-mitten" id="rad1">Tryck här så blir det gult men vitt på de andra raderna</p>
+    <p class="text-mitten" id="rad2">Tryck här så blir det gult men vitt på de andra raderna</p>
+    <p class="text-mitten" id="rad3">Tryck här så blir det gult men vitt på de andra raderna</p>
+    <div id="box"><h3 class="text-mitten">Klicka på mig</h3></div>
+    <div id="box2"><h3 class="text-mitten">Håll musen över boxen</h3></div>
+    <div id="box3"><h3 class="text-mitten">Tryck på en tangent</h3></div>
+   
     <script src="GruppJS.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
