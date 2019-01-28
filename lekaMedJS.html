@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LekaMedJavascript</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-9dACWymWSkhCeCgbjV6xqS20Luu4ue6QnEvr+nMXpPMwIq/OB89AoRh27Flsrxzs" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
 </head>
 
 <body onload="myFunction()" class="body">
@@ -24,42 +25,31 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item ">
-              <a class="nav-link" href="index.Html">Startsida <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="onload.html">Onload <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="lekaMedJS.html">LekaMedJavascript</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
+            </li>           
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
+              <a class="nav-link disabled" href="AboutJavascriptEvents.html">About</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
         </div>
       </nav>
   <br>
+
   <div class="meddelande">
   <p class="text-mitten">Skriv vad du vill i textfältet så kommer du få ett meddelande när du lämnar textfältet!</p>
          <p class="text-mitten">Skriv vad du vill:</p>  <input class="meddelande" type="text" name="txt" value="Hejsvejs" onchange="ourFunction(this.value)" >
         </div>
   <br> 
-
-   <p class="text-mitten">Vill du rita kan du göra det här</p> <canvas class="canvas" id="canvas"  width="300" height="200" style="border: solid 1px #000"></canvas>
-
+  <div class="göm">
+    
+    <p class="text-mitten">Vill du rita kan du göra det här</p> <canvas class="canvas" id="canvas"  width="300" height="200" style="border: solid 1px #000"></canvas> 
+    <button onclick="rensa()" class="button">Tryck här om du vill rensa rutan ovan</button>
+    
     <br>
+  </div>
 
     <p class="text-mitten" id="rad1">Tryck här så blir det gult men vitt på de andra raderna</p>
     <p class="text-mitten" id="rad2">Tryck här så blir det gult men vitt på de andra raderna</p>
