@@ -1,3 +1,4 @@
+
 header {
   text-align: center;
   height: auto;
@@ -86,32 +87,60 @@ body {
 .body {
   background-color: greenyellow;
 }
-@media (max-width: 768px) {
-  .göm {
-    display: none;
+.body1 {
+    background-color: silver;
   }
+  .body3{
+    background-color: hotpink;
 }
 
 .hr {
   border: 5px solid black;
 }
-@media (min-width: 769px) {
-  .grid-container {
-    display: inline-grid;
-    border: 5px solid black;
-    padding: 10px;
-    grid-gap: 10px;
-    grid-template-columns: auto auto;
-  }
-  .grid-item {
-    border: 2px solid black;
-    padding: 5px;
-    width: 100%;
-  }
+
+.text-startsida{
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
 }
-h2
-{
+
+
+@media (max-width: 768px){
+    .göm {
+display: none;
+    }
+    .grid-container{
+        border: 5px solid black;
+    }
+    .p3{
+        padding: 15px;
+    }
+    .rubrik{
+        padding: 15px;
+        padding-top: 50px;
+        margin-top: -50px;
+    }
     
-    padding-top: 50px;
-    margin-top: -50px;
+  }
+
+
+.hr{
+    border: 5px solid black;
+}
+ @media (min-width: 769px){
+    .grid-container {
+        
+        display: inline-grid;
+        border: 5px solid black;
+        padding: 10px;
+        
+        grid-gap: 10px ;
+        grid-template-columns: auto auto;
+    } 
+    .grid-item{
+        border: 2px solid black;
+        padding: 5px;
+        width: 100%;
+        background-color: #ffa500;
+    }
 }
