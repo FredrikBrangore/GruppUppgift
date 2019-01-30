@@ -13,7 +13,6 @@
       crossorigin="anonymous"
     />
   </head>
-
   <body onload="myFunction()" class="body">
     <header><h1>Javascript Events</h1></header>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -33,39 +32,18 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="lekaMedJS.html">lekaMedJavascript</a>
-          </li>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              About Javascript Events
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="AboutJavascriptEvents.html" id="#01">Onload</a>
-              <a class="dropdown-item" href="#02">Onchange</a>
-              <a class="dropdown-item" href="#03">MouseMove</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#04">Click</a>
-              <a class="dropdown-item" href="#05">Mouseover</a>
-              <a class="dropdown-item" href="#06">MouseOut</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#07">MouseDown</a>
-              <a class="dropdown-item" href="#08">MouseUp</a>
-              <a class="dropdown-item" href="#09">KeyDown</a>
-            </div>
+              <a class="nav-link active" href="lekaMedJS.html">lekaMedJavascript</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="AboutJavascriptEvents.html">About</a>
+            </li>
           </li>
         </ul>
       </div>
     </nav>
     <br />
+    <hr class="hr" >
+    <h4 class="text-mitten" style="color:RED">Keydown och onChange event</h4>
     <div id="box3"><h3 class="text-mitten">Skriv så ändras jag.</h3></div>
     <div class="meddelande">
       <p class="text-mitten">
@@ -81,41 +59,33 @@
         onchange="ourFunction(this.value)"
       />
     </div>
-    <br />
+    <hr class="hr" >
+  
     <div class="göm">
-      <p class="text-mitten">Vill du rita kan du göra det här</p>
-      <canvas
-        class="canvas"
-        id="canvas"
-        width="300"
-        height="200"
-        style="border: solid 1px #000"
-      ></canvas>
-      <button onclick="rensa()" class="button">
-        Tryck här om du vill rensa rutan ovan
-      </button>
-
-      <br />
+      <h4 class="text-mitten" style="color:RED">Mousedown och Mouseup event</h4>
+      <p class="text-mitten">Vill du rita kan du göra det här</p> <canvas class="canvas" id="canvas"  width="300" height="200" style="border: solid 1px #000"></canvas> 
+      <button onclick="rensa()" class="button">Tryck här om du vill rensa rutan ovan</button>
+      <hr class="hr" >
+      <h4 class="text-mitten" style="color:RED">Keydown och Keyup event</h4>
+      <p class="text-mitten">Tryck eller håll ner höger eller vänster piltangent</p>
+      <canvas class="canvas1" id="canvas1"  width="600" height="400" style="border: solid 5px #000"></canvas>
+      
+      <hr class="hr" >
     </div>
-
-    <p class="text-mitten" id="rad1">
-      Tryck här så blir det gult men vitt på de andra raderna
-    </p>
-    <p class="text-mitten" id="rad2">
-      Tryck här så blir det gult men vitt på de andra raderna
-    </p>
-    <p class="text-mitten" id="rad3">
-      Tryck här så blir det gult men vitt på de andra raderna
-    </p>
-    <div id="box"><h3>Klicka på mig</h3></div>
-    <div id="box2" class="göm"><h3>Håll musen över boxen</h3></div>
+    <h4 class="text-mitten" style="color:RED">Click event</h4>
+      <p class="text-mitten" id="rad1">Tryck här så blir det gult men vitt på de andra raderna</p>
+      <p class="text-mitten" id="rad2">Tryck här så blir det gult men vitt på de andra raderna</p>
+      <p class="text-mitten" id="rad3">Tryck här så blir det gult men vitt på de andra raderna</p>
+      <div id="box"><h3>Klicka på mig</h3></div>
+      <div id="göm">
+        <h4 class="text-mitten" style="color:RED">Mouseover och Mouseout event</h4>
+        <div id="box2"><h3 class="text-mitten">Håll musen över boxen</h3></div>
+      </div>
+      <h4 class="text-mitten" style="color:RED">Press eller Swipe</h4>
     <div id="box4">TryckNer, Swipa.</div>
     
     <script src="https://hammerjs.github.io/dist/hammer.js"></script>
     <script src="GruppJS.js"></script>
-
-
-    
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
