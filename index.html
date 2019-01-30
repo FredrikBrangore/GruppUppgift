@@ -14,7 +14,7 @@
     <header>
         <h1>Javascript Events</h1>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.Html">Startsida</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -30,25 +30,32 @@
             </li>
             
             <li class="nav-item">
-              <a class="nav-link" href="AboutJavascriptEvents.html">About</a>
+              <a class="nav-link active" href="AboutJavascriptEvents.html">About</a>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  About Javascript Events
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#01">Onload</a>
+                  <a class="dropdown-item" href="#02">Onchange</a>
+                  <a class="dropdown-item" href="#03">MouseMove</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#04">Click</a>
+                  <a class="dropdown-item" href="#05">Mouseover</a>
+                  <a class="dropdown-item" href="#06">MouseOut</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#07">MouseDown</a>
+                  <a class="dropdown-item" href="#08">MouseUp</a>
+                  <a class="dropdown-item" href="#09">KeyDown</a>
+                  
+                </div>
+                
+              </li>
           </ul>
-          
         </div>
       </nav>
 
-    <canvas class="canvas" id="canvas"  width="300" height="200" style="border: solid 1px #000"></canvas>
-    
-    <p id="rad1">Tryck här så blir det gult</p>
-    <p id="rad2">Tryck här så blir det gult men vitt på de andra raderna</p>
-    <p id="rad3">Tryck här så blir det gult men vitt på de andra raderna</p>
-    <div id="box"></div>
-    <div id="box2"><h3 class="text-mitten">Try to hover over this box</h3></div>
-    <div id="box3"><h3 class="text-mitten">Tryck på valfri tangent</h3></div>
-
-    <script>
-    
-    </script>
     <script src="GruppJS.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
