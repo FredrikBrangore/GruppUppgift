@@ -93,23 +93,17 @@ let pos; //position
 let klottra = false;
 let lw = 1; //lineWidth
 
-window.addEventListener("keydown", function() {
-  key = event.keyCode;
-  if (key == 38) lw = lw + 1;
-  if (key == 40 && lw > 1) lw = lw - 1;
-});
-
 canvas.addEventListener(
   "mousedown",
   function(evt) {
     //börja rita
     klottra = true; //ok att börja rita
     pos = mPos(evt); //hämta in som en array med x och y position
-
     c.moveTo(pos.x, pos.y); //börja linjen
   },
   false
 );
+
 canvas.addEventListener(
   "mouseup",
   function(evt) {
@@ -145,10 +139,18 @@ function mPos(evt) {
   };
 }
 
+var fired = false;
+window.onkeyup = function() {
+  fired = false;
+};
+
 //Ruta3 som gör att när du trycker ner en valfri tangent så ändras färgen i rutan
 let ruta3 = document.getElementById("box3");
 window.addEventListener("keydown", function() {
-  ruta3.style.backgroundColor = getRandomColor();
+  if (!fired) {
+    fired = true;
+    ruta3.style.backgroundColor = getRandomColor();
+  }
 }),
   false;
 
@@ -170,99 +172,102 @@ function rensa() {
   c.closePath();
 }
 
-var myElement = document.getElementById("box4");
+var ruta4 = document.getElementById("box4");
 
 // create a simple instance
 // by default, it only adds horizontal recognizers
-var mc = new Hammer(myElement);
+var mc = new Hammer(ruta4);
 
 // listen to events...
-mc.on("panleft panright press", function(ev) {
-   myElement.innerHTML = ev.type +  " gesture detected.";
-   myElement.style.backgroundColor = getRandomColor();
-  
+mc.on("panleft panright tap press", function(ev) {
+  ruta4.innerHTML = ev.type + " gesture detected.";
+  if (ruta4.innerHTML == "panright gesture detected.") {
+    ruta4.style.backgroundColor = "purple";
+  } else if (ruta4.innerHTML == "press gesture detected.") {
+    ruta4.style.backgroundColor = "yellow";
+  } else if (ruta4.innerHTML == "panleft gesture detected.") {
+    ruta4.style.backgroundColor = "red";
+  } else {
+    ruta4.style.backgroundColor = getRandomColor();
+  }
 });
 
-canvas1 =document.getElementById("canvas1");
+canvas1 = document.getElementById("canvas1");
 c1 = canvas1.getContext("2d");
 
 var xpos = 300;
 var img1 = new Image();
 img1.src = "Images/overworld_bg.png";
-img1.onload = function()
-{
-    //drawImage(bild, x-start, y-start, bredd, höjd, x-position där bilden ska visas, y-position där bilden ska visas, bredd, höjd)
-    c1.drawImage(img1,0,0,600,400 );
+img1.onload = function() {
+  //drawImage(bild, x-start, y-start, bredd, höjd, x-position där bilden ska visas, y-position där bilden ska visas, bredd, höjd)
+  c1.drawImage(img1, 0, 0, 600, 400);
 };
 
 var xpos = 300;
-var frame = 96;  //bildruta kommer att förändras med 32 varje gång
+var frame = 96; //bildruta kommer att förändras med 32 varje gång
 var img = new Image();
 img.src = "Images/mario1.png";
-img.onload = function()
-{
-    //drawImage(bild, x-start, y-start, bredd, höjd, x-position där bilden ska visas, y-position där bilden ska visas, bredd, höjd)
-    c1.drawImage(img,frame,0,32,64,xpos,275,32,64);
+img.onload = function() {
+  //drawImage(bild, x-start, y-start, bredd, höjd, x-position där bilden ska visas, y-position där bilden ska visas, bredd, höjd)
+  c1.drawImage(img, frame, 0, 32, 64, xpos, 275, 32, 64);
 };
 
-c1.moveTo(0,264);
-c1.lineTo(600,264)
+c1.moveTo(0, 264);
+c1.lineTo(600, 264);
 c1.stroke();
 
-window.addEventListener("keydown",function()
-{
-    var key=event.keyCode;
-    if(key==39) //höger
-        {
-            goRight=window.requestAnimationFrame(right);
-        }
-    if(key==37) //vänster
-        {
-            goLeft=window.requestAnimationFrame(left);
-        }
-
-
-},false);
-
-window.addEventListener("keyup",function()
-{
-    sudda();
-    c1.drawImage(img1,0,0,600,400 );
-    c1.drawImage(img,96,0,32,64,xpos,275,32,64);
-},false);
-
-function sudda()
-    {
-        c1.clearRect(0,0,600,400);
-        c1.moveTo(0,264);  //skapa en linje som han går på
-        c1.lineTo(600,264) //skapa en linje som han går på
-        c1.stroke();       //skapa en linje som han går på
+window.addEventListener(
+  "keydown",
+  event => {
+    /* var key = event.keyCode || event.key; Denna kod funka inte i Firefox så ändre till nedan
+    då funkar det i Firefox och Chrome. */
+    if (event.isComposing || event.keyCode === 39) {
+      //höger
+      goRight = window.requestAnimationFrame(right);
+    } else if (event.isComposing || event.keyCode === 37) {
+      //vänster
+      goLeft = window.requestAnimationFrame(left);
     }
+  },
+  false
+);
 
-function left()
-{
+window.addEventListener(
+  "keyup",
+  function() {
     sudda();
-    c1.drawImage(img1,0,0,600,400 );
-    c1.drawImage(img,0+frame,0,32,64,xpos,275,32,64);
-    var nu = new Date().valueOf(); // ValueOf = Tid i millisekunder
-    frame = 32*(Math.floor(nu/100)%3);
-    xpos -=25;
-    if(xpos < -40) xpos = 640;
-    
+    c1.drawImage(img1, 0, 0, 600, 400);
+    c1.drawImage(img, 96, 0, 32, 64, xpos, 275, 32, 64);
+  },
+  false
+);
+
+function sudda() {
+  c1.clearRect(0, 0, 600, 400);
+  c1.moveTo(0, 264); //skapa en linje som han går på
+  c1.lineTo(600, 264); //skapa en linje som han går på
+  c1.stroke(); //skapa en linje som han går på
 }
 
-function right()
-{
-    sudda();
-    c1.drawImage(img1,0,0,600,400 );
-    c1.drawImage(img,192-frame,0,32,64,xpos,275,32,64);
-    var nu = new Date().valueOf(); // ValueOf = Tid i millisekunder
-    frame = 32*(Math.floor(nu/100)%3);
-    xpos +=25;
-    if(xpos > 640) xpos = -40;
-
+function left() {
+  sudda();
+  c1.drawImage(img1, 0, 0, 600, 400);
+  c1.drawImage(img, 0 + frame, 0, 32, 64, xpos, 275, 32, 64);
+  var nu = new Date().valueOf(); // ValueOf = Tid i millisekunder
+  frame = 32 * (Math.floor(nu / 100) % 3);
+  xpos -= 25;
+  if (xpos < -40) xpos = 640;
 }
 
+function right() {
+  sudda();
+  c1.drawImage(img1, 0, 0, 600, 400);
+  c1.drawImage(img, 192 - frame, 0, 32, 64, xpos, 275, 32, 64);
+  var nu = new Date().valueOf(); // ValueOf = Tid i millisekunder
+  frame = 32 * (Math.floor(nu / 100) % 3);
+  xpos += 25;
+  if (xpos > 640) xpos = -40;
+}
 
 /*   window.addEventListener("keydown",function(){
     let key = event.keyCode;
