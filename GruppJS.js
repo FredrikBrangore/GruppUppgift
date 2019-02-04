@@ -143,7 +143,6 @@ var fired = false;
 window.onkeyup = function() {
   fired = false;
 };
-
 //Ruta3 som gör att när du trycker ner en valfri tangent så ändras färgen i rutan
 let ruta3 = document.getElementById("box3");
 window.addEventListener("keydown", function() {
@@ -173,7 +172,6 @@ function rensa() {
 }
 
 var ruta4 = document.getElementById("box4");
-
 // create a simple instance
 // by default, it only adds horizontal recognizers
 var mc = new Hammer(ruta4);
@@ -199,7 +197,8 @@ var xpos = 300;
 var img1 = new Image();
 img1.src = "Images/overworld_bg.png";
 img1.onload = function() {
-  //drawImage(bild, x-start, y-start, bredd, höjd, x-position där bilden ska visas, y-position där bilden ska visas, bredd, höjd)
+/*   drawImage(bild, x-start, y-start, bredd, höjd,
+     x-position där bilden ska visas, y-position där bilden ska visas, bredd, höjd) */
   c1.drawImage(img1, 0, 0, 600, 400);
 };
 
@@ -208,7 +207,8 @@ var frame = 96; //bildruta kommer att förändras med 32 varje gång
 var img = new Image();
 img.src = "Images/mario1.png";
 img.onload = function() {
-  //drawImage(bild, x-start, y-start, bredd, höjd, x-position där bilden ska visas, y-position där bilden ska visas, bredd, höjd)
+/*   drawImage(bild, x-start, y-start, bredd, höjd,
+     x-position där bilden ska visas, y-position där bilden ska visas, bredd, höjd) */
   c1.drawImage(img, frame, 0, 32, 64, xpos, 275, 32, 64);
 };
 

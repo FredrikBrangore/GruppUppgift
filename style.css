@@ -22,7 +22,6 @@ body {
   text-align: center;
   text-shadow: -2px 0 #f3aaaa, 0 1px #f8b4b4, 0 -2px #f39e9e;
   background-color: #ffa500;
-  
 }
 #box2 {
   width: 50%;
@@ -71,7 +70,6 @@ body {
   border: 5px solid red;
   -webkit-appearance: button;
   -moz-appearance: button;
-
   background-color: white;
   text-decoration-color: firebrick;
   padding: 0;
@@ -105,6 +103,9 @@ body {
   margin-left: 25%;
   margin-right: 25%;
 }
+.h4färg {
+  color: #ff0000;
+}
 
 @media (max-width: 768px) {
   .göm {
@@ -122,10 +123,17 @@ body {
     padding-top: 60px;
     margin-top: -60px;
   }
-  .bildStorlek{
+  .bildStorlek {
     width: 100%;
     height: 100%;
-    }
+  }
+  .bildStorlekStart {
+    width: 70%;
+    height: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .hr {
@@ -147,17 +155,24 @@ body {
     width: 100%;
     background-color: #ffa500;
   }
-  .bildStorlek{
+  .bildStorlek {
     width: 70%;
     height: 70%;
-    }
-    .rubrik {
-      padding-top: 60px;
-      margin-top: -60px;
-    }
+  }
+  .bildStorlekStart {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rubrik {
+    padding-top: 60px;
+    margin-top: -60px;
+  }
 }
-@media (min-width: 1400px){
-.fontStorlek {
-  font-size: 1.5em;
-} 
+@media (min-width: 1400px) {
+  .fontStorlek {
+    font-size: 1.5em;
+  }
 }
