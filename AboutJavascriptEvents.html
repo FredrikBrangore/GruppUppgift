@@ -23,7 +23,12 @@
           height="30"
           class="d-inline-block align-top"
           alt=""
-        /><!-- Ger bild till startsida knappen. -->
+        /><!-- Ger bild till startsida knappen.
+         Klassen navbar säger att det ska vara en navbar
+         Klassen fixed-top får navbaren att sitta fast högst upp på sidan hela tiden 
+         Klassen navbar-expand-lg används för att göra navbaren responsive
+         Klassen bg-light gör att navbaren ges en bakgrundsfärg
+        -->
         Startsida</a
       >
       <button
@@ -37,13 +42,21 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-
+      <!-- 
+         Klassen navbar-toggler kallar på collapse eventet från Bootstrap då media blir Tablet/Mobil nivå.
+         Klassen collapse navbar-collapse gör så att du får en hamburgar meny som använder din Navbars information.
+         Klassen navbar-nav ger information hur ul listan ska se ut.
+         Klassen nav-item använder infromationen ovan för att skapa en post den behövs också för att kunna använda Dropdown funktionen
+         Klassen nav-link här skrivs koden för linkar dom måste vara seperata när man vill ha Dropdown. 
+         Klassen dropdown skapar en dropdown lista där du kan sedan fylla på med items.
+         Klassen dropdown-toggle gör så att du kan klicka på knappen och få upp en lista 
+         Klassen active för så att den activa tabben är i skarpare text.
+        -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="lekaMedJS.html">lekaMedJavascript</a>
+            <a class="nav-link" href="lekaMedJS.html">LekaMedJavascript</a>
           </li>
-
           <li class="nav-item dropdown">
             <a
               class="nav-link active dropdown-toggle"
@@ -111,16 +124,18 @@
       <div class="grid-item">
         <h2 class="rubrik" id="04">MouseOver</h2>
         <p class="p3 fontStorlek">
-          MouseOver event anropas när du rör musen över ett visst objekt.
-          VI använder det för att både få en ruta att byta färg/text och för att Rita i Canvas rutan.<br />
+          MouseOver event anropas när du rör musen över ett visst objekt. VI
+          använder det för att både få en ruta att byta färg/text och för att
+          Rita i Canvas rutan.<br />
           <img src="Images/MouseOver.PNG" alt="MouseOver" class="bildStorlek" />
         </p>
       </div>
       <div class="grid-item">
         <h2 class="rubrik" id="05">MouseOut</h2>
         <p class="p3 fontStorlek">
-          MouseOut event anropas när du rör musen bort från objektet.
-          Den här byter färg och text på rutan i Lekstugan men man kan ju få lite vad som att hända.<br />
+          MouseOut event anropas när du rör musen bort från objektet. Den här
+          byter färg och text på rutan i Lekstugan men man kan ju få lite vad
+          som att hända.<br />
           <img src="Images/MouseOut.PNG" alt="MouseOut" class="bildStorlek" />
         </p>
       </div>
@@ -170,16 +185,17 @@
       <div class="grid-item">
         <h2 class="rubrik" id="11">Färger</h2>
         <p class="p3 fontStorlek">
-          Här slumpar vi Färger med RGB så vi kan använda koden för att byta färger om och om igen.<br />
+          Här slumpar vi Färger med RGB så vi kan använda koden för att byta
+          färger om och om igen.<br />
           <img src="Images/Färger.PNG" alt="Färger" class="bildStorlek" />
         </p>
       </div>
       <div class="grid-item">
         <h2 class="rubrik" id="12">Canvas</h2>
         <p class="p3 fontStorlek">
-          Som sagt ovan använder vi onload för att skapa bilden då Canvas inte kan rita
-          den före den finns laddad till skillnad från img så med koden nedan
-          kan vi nu se Mario.<br />
+          Som sagt ovan använder vi onload för att skapa bilden då Canvas inte
+          kan rita den före den finns laddad till skillnad från img så med koden
+          nedan kan vi nu se Mario.<br />
           <img src="Images/Canvas.PNG" alt="Canvas" class="bildStorlek" />
         </p>
       </div>

@@ -142,6 +142,9 @@ body {
 }
 
 @media (min-width: 769px) {
+  .göm2{
+    display: none;
+  }
   .grid-container {
     display: inline-grid;
     border: 5px solid black;
