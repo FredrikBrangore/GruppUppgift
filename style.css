@@ -40,7 +40,7 @@ body {
   margin-bottom: 5px;
   margin-left: auto;
   margin-right: auto;
-  height: 15%;
+  height: 75px;
   text-align: center;
   border: 1px solid #000000;
 }
@@ -67,11 +67,11 @@ body {
   display: block;
 }
 .button {
-  border: 5px solid red;
+  border: 5px solid #ff0000;
   -webkit-appearance: button;
   -moz-appearance: button;
-  background-color: white;
-  text-decoration-color: firebrick;
+  background-color: #ffffff;
+  text-decoration-color: #b22222;
   padding: 0;
   margin: auto;
   display: block;
@@ -85,17 +85,17 @@ body {
   display: block;
 }
 .body {
-  background-color: greenyellow;
+  background-color: #adff2f;
 }
 .body1 {
-  background-color: silver;
+  background-color: #c0c0c0;
 }
 .body3 {
-  background-color: hotpink;
+  background-color: #ff69b4;
 }
 
 .hr {
-  border: 5px solid black;
+  border: 5px solid #000000;
 }
 
 .text-startsida {
