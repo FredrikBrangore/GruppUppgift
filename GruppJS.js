@@ -182,13 +182,13 @@ mc.on("panleft panright tap press", function(ev) {
   
   ruta4.childNodes[0].innerHTML =  ev.type + " gesture detected.";
   if (ruta4.childNodes[0].innerHTML == "panright gesture detected.") {
-    ruta4.childNodes[0].innerHTML = "Swipa Höger"
+    ruta4.childNodes[0].innerHTML = "Swipat Höger"
     ruta4.style.backgroundColor = "violet";
   } else if (ruta4.childNodes[0].innerHTML == "press gesture detected.") {
     ruta4.childNodes[0].innerHTML = "Håll Ner"
     ruta4.style.backgroundColor = "yellow";
   } else if (ruta4.childNodes[0].innerHTML == "panleft gesture detected.") {
-    ruta4.childNodes[0].innerHTML = "Swipa Vänster"
+    ruta4.childNodes[0].innerHTML = "Swipat Vänster"
     ruta4.style.backgroundColor = "red";
   } else {
     ruta4.childNodes[0].innerHTML = "Tappa"
