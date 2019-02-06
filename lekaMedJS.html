@@ -14,7 +14,7 @@
     />
   </head>
   <body onload="myFunction()" class="body">
-    <header><h1>Javascript Events</h1></header>
+    <header><h1 class="fontStorlek1">Javascript Events</h1></header>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="index.html"
         ><img
@@ -52,23 +52,23 @@
     </nav>
     <br />
     <hr class="hr" />
-    <h4 class="text-mitten h4färg">
-      <span><a href=""></a> </span> Keydown och onChange event
+    <h4 class="text-mitten h4färg fontStorlek">
+      Keydown och onChange event
     </h4>
     <div id="box3">
-      <h3 class="text-mitten">
+      <h3 class="text-mitten fontStorlek">
         <span class="göm">När du klickar på tagenter så ändras min Färg.</span
         ><span class="göm2"> Skriv.</span>
       </h3>
     </div>
     <div class="meddelande">
-      <p class="text-mitten">
+      <p class="text-mitten fontStorlek">
         Skriv vad du vill i textfältet så
         <span class="göm2"> ändras färgen på boxen ovan och du</span> kommer du
         få ett meddelande när du lämnar textfältet!
       </p>
       <input
-        class="meddelande"
+        class="meddelande fontStorlek"
         type="text"
         name="txt"
         value="Hejsvejs"
@@ -78,21 +78,23 @@
     <hr class="hr" />
 
     <div class="göm">
-      <h4 class="text-mitten h4färg">Mousedown och Mouseup event</h4>
-      <p class="text-mitten">Vill du rita kan du göra det här</p>
+      <h4 class="text-mitten h4färg fontStorlek">
+        Mousedown och Mouseup event
+      </h4>
+      <p class="text-mitten fontStorlek">Vill du rita kan du göra det här</p>
       <canvas
         class="canvas"
         id="canvas"
-        width="300"
-        height="200"
+        width="500"
+        height="400"
         style="border: solid 1px #000"
       ></canvas>
-      <button onclick="rensa()" class="button">
+      <button onclick="rensa()" class="button fontStorlek">
         Tryck här om du vill rensa rutan ovan
       </button>
       <hr class="hr" />
-      <h4 class="text-mitten h4färg">Keydown och Keyup event</h4>
-      <p class="text-mitten">
+      <h4 class="text-mitten h4färg fontStorlek">Keydown och Keyup event</h4>
+      <p class="text-mitten fontStorlek">
         Tryck eller håll ner höger eller vänster piltangent
       </p>
       <canvas
@@ -104,26 +106,26 @@
       ></canvas>
       <hr class="hr" />
     </div>
-    <h4 class="text-mitten h4färg">Click event</h4>
-    <p class="text-mitten" id="rad1">
+    <h4 class="text-mitten h4färg fontStorlek">Click event</h4>
+    <p class="text-mitten fontStorlek" id="rad1">
       Tryck här så blir det gult men vitt på de andra raderna
     </p>
-    <p class="text-mitten" id="rad2">
+    <p class="text-mitten fontStorlek" id="rad2">
       Tryck här så blir det gult men vitt på de andra raderna
     </p>
-    <p class="text-mitten" id="rad3">
+    <p class="text-mitten fontStorlek" id="rad3">
       Tryck här så blir det gult men vitt på de andra raderna
     </p>
-    <div id="box"><h3>Klicka på mig</h3></div>
-    <h4 class="text-mitten göm h4färg">
+    <div id="box"><h3 class="fontStorlek">Klicka på mig</h3></div>
+    <h4 class="text-mitten göm h4färg fontStorlek">
       Mouseover och Mouseout event
     </h4>
     <div id="box2" class="göm">
-      <h3 class="text-mitten">Håll musen över boxen</h3>
+      <h3 class="text-mitten fontStorlek">Håll musen över boxen</h3>
     </div>
 
-    <h4 class="text-mitten h4färg">Press eller Swipe</h4>
-    <div id="box4">TryckNer, Swipa.</div>
+    <h4 class="text-mitten h4färg fontStorlek">Press eller Swipe</h4>
+    <div id="box4"><span>Tap, TryckNer, Swipa.</span></div>
     <hr class="hr" />
     <script src="https://hammerjs.github.io/dist/hammer.js"></script>
     <script src="GruppJS.js"></script>

@@ -142,7 +142,7 @@ body {
 }
 
 @media (min-width: 769px) {
-  .göm2{
+  .göm2 {
     display: none;
   }
   .grid-container {
@@ -176,6 +176,27 @@ body {
 }
 @media (min-width: 1400px) {
   .fontStorlek {
-    font-size: 1.5em;
+    font-size: 1.7em;
+  }
+
+  .fontStorlek1 {
+    font-size: 3em;
+  }
+  .navbar-fixed-top {
+    min-height: 80px;
+  }
+  .navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 80px;
+  }
+}
+@media (min-width: 2500px) {
+  .fontStorlek {
+    font-size: 3em;
+  }
+
+  .fontStorlek1 {
+    font-size: 5em;
   }
 }
