@@ -182,14 +182,6 @@ body {
   .fontStorlek1 {
     font-size: 3em;
   }
-  .navbar-fixed-top {
-    min-height: 80px;
-  }
-  .navbar-nav > li > a {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    line-height: 80px;
-  }
 }
 @media (min-width: 2500px) {
   .fontStorlek {
