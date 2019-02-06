@@ -69,7 +69,8 @@ ruta2.addEventListener(
   function() {
     ruta2.style.backgroundColor = "red";
     ruta2.style.color = "white";
-    ruta2.innerHTML = "<h3>Mouseover</h3>";
+    ruta2.childNodes[1].innerHTML = "Mouseover";
+    
   },
   false
 );
@@ -79,7 +80,7 @@ ruta2.addEventListener(
   function() {
     ruta2.style.backgroundColor = "green";
     ruta2.style.color = "hotpink";
-    ruta2.innerHTML = "<h3>Mouseout</h3>";
+    ruta2.childNodes[1].innerHTML = "MouseOut"
   },
   false
 );
@@ -178,12 +179,13 @@ var mc = new Hammer(ruta4);
 
 // listen to events...
 mc.on("panleft panright tap press", function(ev) {
-  ruta4.innerHTML = ev.type + " gesture detected.";
-  if (ruta4.innerHTML == "panright gesture detected.") {
+  
+  ruta4.childNodes[0].innerHTML =  ev.type + " gesture detected.";
+  if (ruta4.childNodes[0].innerHTML == "panright gesture detected.") {
     ruta4.style.backgroundColor = "purple";
-  } else if (ruta4.innerHTML == "press gesture detected.") {
+  } else if (ruta4.childNodes[0].innerHTML == "press gesture detected.") {
     ruta4.style.backgroundColor = "yellow";
-  } else if (ruta4.innerHTML == "panleft gesture detected.") {
+  } else if (ruta4.childNodes[0].innerHTML == "panleft gesture detected.") {
     ruta4.style.backgroundColor = "red";
   } else {
     ruta4.style.backgroundColor = getRandomColor();
