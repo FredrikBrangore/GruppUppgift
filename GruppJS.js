@@ -70,7 +70,7 @@ ruta2.addEventListener(
     ruta2.style.backgroundColor = "red";
     ruta2.style.color = "white";
     ruta2.childNodes[1].innerHTML = "Mouseover";
-    
+    ruta2.childNodes[3].innerHTML = "Innanför";
   },
   false
 );
@@ -80,7 +80,8 @@ ruta2.addEventListener(
   function() {
     ruta2.style.backgroundColor = "green";
     ruta2.style.color = "hotpink";
-    ruta2.childNodes[1].innerHTML = "MouseOut"
+    ruta2.childNodes[1].innerHTML = "MouseOut";
+    ruta2.childNodes[3].innerHTML = "Utanför";
   },
   false
 );
@@ -179,19 +180,18 @@ var mc = new Hammer(ruta4);
 
 // listen to events...
 mc.on("panleft panright tap press", function(ev) {
-  
-  ruta4.childNodes[0].innerHTML =  ev.type + " gesture detected.";
+  ruta4.childNodes[0].innerHTML = ev.type + " gesture detected.";
   if (ruta4.childNodes[0].innerHTML == "panright gesture detected.") {
-    ruta4.childNodes[0].innerHTML = "Swipat Höger"
+    ruta4.childNodes[0].innerHTML = "Swipat Höger";
     ruta4.style.backgroundColor = "violet";
   } else if (ruta4.childNodes[0].innerHTML == "press gesture detected.") {
-    ruta4.childNodes[0].innerHTML = "Håll Ner"
+    ruta4.childNodes[0].innerHTML = "Håll Ner";
     ruta4.style.backgroundColor = "yellow";
   } else if (ruta4.childNodes[0].innerHTML == "panleft gesture detected.") {
-    ruta4.childNodes[0].innerHTML = "Swipat Vänster"
+    ruta4.childNodes[0].innerHTML = "Swipat Vänster";
     ruta4.style.backgroundColor = "red";
   } else {
-    ruta4.childNodes[0].innerHTML = "Tappa"
+    ruta4.childNodes[0].innerHTML = "Tappa";
     ruta4.style.backgroundColor = getRandomColor();
   }
 });
@@ -203,7 +203,7 @@ var xpos = 300;
 var img1 = new Image();
 img1.src = "Images/overworld_bg.png";
 img1.onload = function() {
-/*   drawImage(bild, x-start, y-start, bredd, höjd,
+  /*   drawImage(bild, x-start, y-start, bredd, höjd,
      x-position där bilden ska visas, y-position där bilden ska visas, bredd, höjd) */
   c1.drawImage(img1, 0, 0, 600, 400);
 };
@@ -213,7 +213,7 @@ var frame = 96; //bildruta kommer att förändras med 32 varje gång
 var img = new Image();
 img.src = "Images/mario1.png";
 img.onload = function() {
-/*   drawImage(bild, x-start, y-start, bredd, höjd,
+  /*   drawImage(bild, x-start, y-start, bredd, höjd,
      x-position där bilden ska visas, y-position där bilden ska visas, bredd, höjd) */
   c1.drawImage(img, frame, 0, 32, 64, xpos, 275, 32, 64);
 };
@@ -274,7 +274,32 @@ function right() {
   xpos += 25;
   if (xpos > 640) xpos = -40;
 }
-
+var mcMario = new Hammer(window);
+mcMario.on(
+  "panright panleft",
+  function(ev) {
+   if (ev.type = "panright") {
+      //höger
+        goRight = window.requestAnimationFrame(right);
+    }
+   else if (ev.type = "panleft") {
+      //höger
+        goLeft = window.requestAnimationFrame(left);
+    }
+  },
+  false
+);
+mcMario.on(
+  "press pressup",
+  function(ev) {
+    if (ev.type = "press pressup") {
+      sudda();
+      c1.drawImage(img1, 0, 0, 600, 400);
+      c1.drawImage(img, 96, 0, 32, 64, xpos, 275, 32, 64);
+    }
+  },
+  false
+);
 /*   window.addEventListener("keydown",function(){
     let key = event.keyCode;
     let alfa;

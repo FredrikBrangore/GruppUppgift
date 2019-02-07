@@ -111,6 +111,9 @@ body {
   .göm {
     display: none;
   }
+  .canvas1 {
+    width: 300px;
+  }
   .grid-container {
     border: 5px solid #000000;
     background-color: #ffa500;
@@ -134,6 +137,12 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+  #box4 {
+    height: 20%;
+  }
+  #box {
+    height: 20%;
   }
 }
 
