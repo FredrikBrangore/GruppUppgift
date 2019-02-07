@@ -274,17 +274,27 @@ function right() {
   xpos += 25;
   if (xpos > 640) xpos = -40;
 }
+
+function rightMob() {
+  sudda();
+  c1.drawImage(img1, 0, 0, 600, 400);
+  c1.drawImage(img, 192 - frame, 0, 32, 64, xpos, 275, 32, 64);
+  var nu = new Date().valueOf(); // ValueOf = Tid i millisekunder
+  frame = 32 * (Math.floor(nu / 100) % 3);
+  xpos += 12;
+  if (xpos > 640) xpos = -40;
+}
 var mcMario = new Hammer(window);
 mcMario.on(
   "panright panleft",
   function(ev) {
    if (ev.type = "panright") {
       //höger
-        goRight = window.requestAnimationFrame(right);
+        goRight = window.requestAnimationFrame(rightMob);
     }
    else if (ev.type = "panleft") {
       //höger
-        goLeft = window.requestAnimationFrame(left);
+        goLeft = window.requestAnimationFrame(rightMob);
     }
   },
   false
